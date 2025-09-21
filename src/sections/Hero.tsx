@@ -6,8 +6,16 @@ import Button from "@/components/Button";
 
 export default function Hero() {
   return (
-    <section>
-      <div className="grid mt-40">
+    <section className="relative z-0 py-70">
+      <div
+        className="absolute inset-0 -z-30 opacity-5"
+        style={{
+          backgroundImage: "url('/grain.jpg')",
+        }}></div>
+        {/*--------- rings ----------*/}
+        <div className="absolute inset-0 size-[620px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5 "></div>
+
+      <div className="grid">
         {/*--------- the Memoji ----------*/}
         <div className="grid justify-center justify-items-center">
           <Image src={"/kikoMain.png"} alt="Kikos image not found!" width={100} height={100} />
