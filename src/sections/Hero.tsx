@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="absolute inset-0 size-[1020px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5 "></div>
         <div className="absolute inset-0 size-[1220px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5 "></div>
         {/*--------- stars ----------*/}
-        <Stars src={"/icons/star.svg"} ringSize={1100} starSize={100} rotation={-72} />
+        <Stars src={"/icons/star.svg"} ringSize={1050} starSize={60} rotation={-72} />
         <Stars src={"/icons/star.svg"} ringSize={770} starSize={40} rotation={222} />
         <Stars src={"/icons/star.svg"} ringSize={810} starSize={25} rotation={72} />
         {/*--------- sparkels ----------*/}
