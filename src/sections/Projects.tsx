@@ -49,7 +49,7 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
   return (
     <section>
-      <div className="grid mt-30">
+      <div className="grid sm:mt-40 mt-5">
         {/*--------- text info ----------*/}
         <div className="grid items-center justify-items-center mb-20">
           <p className="text-sm font-semibold tracking-widest text-emerald-300 uppercase mb-2">MY PORTFOLIO</p>
@@ -61,11 +61,15 @@ export const ProjectsSection = () => {
           </p>
         </div>
         {/*--------- cards ----------*/}
-        <div className="flex flex-col space-y-20 mx-2 max-w-7xl mx-auto">
-          {portfolioProjects.map((project) => (
+        <div className="flex flex-col mx-2 max-w-7xl mx-auto">
+          {portfolioProjects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 pl-8 pr-8 sm:pr-5 pt-8 mx-2 sm:pb-0 after:pointer-events-none">
+              className={`bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 pl-8 pr-8 sm:pr-5 pt-8 mx-2 sm:pb-0 after:pointer-events-none sticky mb-20`}
+              style={{
+                top: `${5 + index * 2}rem`,
+                height: "fit-content",
+              }}>
               <div
                 className="absolute inset-0 -z-10 opacity-5"
                 style={{ backgroundImage: `url(${grainImage.src})` }}></div>
