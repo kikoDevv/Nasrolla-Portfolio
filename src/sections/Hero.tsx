@@ -8,7 +8,7 @@ import Stars from "@/components/Stars";
 export default function Hero() {
   return (
     <section className="relative z-0 py-70">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,_transparent,_black_10%,_black_70%,_transparent)]">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,_transparent,_black_10%,_black_70%,_transparent)] overflow-hidden">
         <div
           className="absolute inset-0 -z-30 opacity-5 h-dvh"
           style={{
@@ -49,10 +49,10 @@ export default function Hero() {
         </div>
         {/*--------- Title  ----------*/}
         <section className="grid gap-2 pt-4">
-          <h1 className="text-4xl font-bold text-center text-transparent md:text-6xl bg-gradient-to-r from-white to-gray-300 bg-clip-text">
+          <h1 className="text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-white to-gray-300 bg-clip-text">
             Crafting Digital Excellence
           </h1>
-          <p className="max-w-2xl mx-auto text-lg leading-relaxed text-center text-gray-300 md:text-xl">
+          <p className="max-w-xl mx-auto text-lg leading-relaxed text-center text-gray-300 md:text-xl">
             I transform innovative ideas into stunning, high-performance web experiences that captivate users and drive
             results. Ready to bring your vision to life?
           </p>
