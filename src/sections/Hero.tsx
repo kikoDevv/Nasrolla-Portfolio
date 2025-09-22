@@ -20,10 +20,17 @@ export default function Hero() {
       <div className="absolute inset-0 size-[1220px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5 "></div>
       {/*--------- stars ----------*/}
       <Stars src={"/icons/star.svg"} ringSize={1100} starSize={100} rotation={-72} />
-      <Stars src={"/icons/star.svg"} ringSize={770} starSize={40} rotation={12} />
+      <Stars src={"/icons/star.svg"} ringSize={770} starSize={40} rotation={222} />
       <Stars src={"/icons/star.svg"} ringSize={810} starSize={25} rotation={72} />
       {/*--------- sparkels ----------*/}
-      <Stars src={"/icons/sparkle.svg"} ringSize={990} starSize={45} rotation={112} />
+      <Stars src={"/icons/sparkle.svg"} ringSize={990} starSize={45} rotation={112} className="opacity-10"/>
+      <Stars src={"/icons/sparkle.svg"} ringSize={960} starSize={45} rotation={190} className="opacity-10"/>
+      <Stars src={"/icons/sparkle.svg"} ringSize={560} starSize={25} rotation={190} className="opacity-10"/>
+      <Stars src={"/icons/sparkle.svg"} ringSize={560} starSize={25} rotation={30} className="opacity-10"/>
+      {/*--------- sircles ----------*/}
+      <Stars src={"/icons/circle.svg"} ringSize={580} starSize={15} rotation={120} className="opacity-10"/>
+      <Stars src={"/icons/circle.svg"} ringSize={790} starSize={25} rotation={320} className="opacity-10"/>
+      <Stars src={"/icons/circle.svg"} ringSize={990} starSize={20} rotation={420} className="opacity-10"/>
       <div className="grid">
         {/*--------- the Memoji ----------*/}
         <div className="grid justify-center justify-items-center">
