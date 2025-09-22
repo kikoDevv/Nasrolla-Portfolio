@@ -41,7 +41,7 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://wordle-gpt.vercel.app/",
     image: wordle,
   },
 ];
@@ -65,7 +65,7 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 p-6 sm:pb-0 after:pointer-events-none">
+              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 pl-8 pr-8 sm:pr-5 pt-8 mx-2 sm:pb-0 after:pointer-events-none">
               <div
                 className="absolute inset-0 -z-10 opacity-5"
                 style={{ backgroundImage: `url(${grainImage.src})` }}></div>
@@ -79,33 +79,33 @@ export const ProjectsSection = () => {
                     </div>
                   </div>
 
-                  <h3 className="font-bold text-2xl lg:text-4xl leading-tight">{project.title}</h3>
+                  <div className="grid space-y-3 mb-5">
+                    <h3 className="font-bold text-2xl lg:text-4xl leading-tight">{project.title}</h3>
 
-                  <hr className="border-t-2 border-white/5" />
+                    <hr className="border-t-2 border-white/5" />
 
-                  <ul className="flex flex-col gap-4">
-                    {project.results.map((result, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-base lg:text-lg text-white/70">
-                        <FaCheckCircle className="text-emerald-400 text-lg flex-shrink-0" />
-                        <span>{result.title}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="flex flex-col gap-4">
+                      {project.results.map((result, idx) => (
+                        <li key={idx} className="flex items-center gap-3  text-base lg:text-lg text-white/70">
+                          <FaCheckCircle className="text-emerald-400 text-lg flex-shrink-0" />
+                          <span>{result.title}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  <Button text="Visit Live Site" icon="📎" className="w-fit h-fit" />
+                    <Button text="Visit Live Site" icon="📎" className="w-fit h-fit" />
+                  </div>
                 </div>
 
                 {/*--------- Image Section ----------*/}
-                <div className={`mt-8 lg:mt-0 ml-3`}>
-                  <div className="relative">
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} screenshot`}
-                      width={600}
-                      height={400}
-                      className="w-full h-auto rounded-2xl shadow-2xl border border-white/10"
-                    />
-                  </div>
+                <div className="relative sm:ml-3">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-t-2xl shadow-2xl border border-white/10"
+                  />
                 </div>
               </div>
             </div>
