@@ -33,4 +33,15 @@
   .animate-move-left {
     animation: move-left linear infinite;
   }
+
+  /* reverse spin utility */
+  @keyframes spin-reverse {
+    to { transform: rotate(-360deg); }
+  }
+
+  .animate-spin-reverse {
+    animation-name: spin-reverse;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
 }

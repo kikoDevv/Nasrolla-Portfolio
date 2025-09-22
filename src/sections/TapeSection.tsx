@@ -34,13 +34,22 @@ export default function TapeSection() {
                 {words.map((word) => (
                   <div key={`${word}-${index}`} className="inline-flex gap-4 items-center whitespace-nowrap">
                     <span className="text-sm font-bold text-gray-900">{word}</span>
-                    <Image
-                      src={"/icons/star.svg"}
-                      alt="Star icon cant be found!"
-                      width={20}
-                      height={20}
-                      className="flex-shrink-0"
-                    />
+                    <span
+                      style={{
+                        display: "inline-block",
+                        animationName: "spin-reverse",
+                        animationDuration: "3s",
+                        animationTimingFunction: "linear",
+                        animationIterationCount: "infinite",
+                      }}>
+                      <Image
+                        src={"/icons/star.svg"}
+                        alt="Star icon cant be found!"
+                        width={20}
+                        height={20}
+                        className=""
+                      />
+                    </span>
                   </div>
                 ))}
               </React.Fragment>
