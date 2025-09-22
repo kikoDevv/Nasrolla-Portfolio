@@ -3,7 +3,7 @@ import Hero from "@/sections/Hero";
 
 export default function Home() {
   return (
-    <div>
+    <div className="mb-100">
       <Header />
       <Hero />
     </div>
