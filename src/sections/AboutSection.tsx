@@ -1,5 +1,18 @@
 "use client";
 import { GiJusticeStar } from "react-icons/gi";
+import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaTools } from "react-icons/fa";
+import { IconType } from "react-icons";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiVercel,
+  SiPrisma,
+  SiPostgresql,
+  SiGraphql,
+  SiJest,
+  SiCypress,
+} from "react-icons/si";
 import React from "react";
 import grainImage from "@/images/grain.jpg";
 import { EmblaCarousel } from "@/components/Carousel";
