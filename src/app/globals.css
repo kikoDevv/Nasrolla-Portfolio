@@ -36,7 +36,9 @@
 
   /* reverse spin utility */
   @keyframes spin-reverse {
-    to { transform: rotate(-360deg); }
+    to {
+      transform: rotate(-360deg);
+    }
   }
 
   .animate-spin-reverse {
@@ -44,4 +46,16 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
+}
+
+/*------------------- embla crousel -------------------*/
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }
