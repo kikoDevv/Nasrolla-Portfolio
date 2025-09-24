@@ -27,7 +27,7 @@ export default function AboutSection() {
           <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }} />
           <div className="flex items-center gap-1">
             <FaStar className="text-emerald-300 text-xl" />
-            <h3 className="text-lg font-semibold">When I'm not coding</h3>
+            <h3 className="text-lg font-semibold">When I&apos;m not coding</h3>
           </div>
           <p className="text-gray-300 text-center">I enjoy exploring games that push systems and strategy.</p>
           {/*--------- image slider ----------*/}
@@ -64,7 +64,7 @@ export default function AboutSection() {
             <h3 className="text-lg font-semibold">Beyond the Code</h3>
           </div>
           <p className="text-gray-300 mt-3 select-none">
-            When I'm not coding, I explore other creative outlets and interests:
+            When I&apos;m not coding, I explore other creative outlets and interests:
           </p>
           {/*--------- Content for beyond the code ----------*/}
           <div className="mt-4 space-y-3">
@@ -88,12 +88,11 @@ export default function AboutSection() {
         </aside>
 
         {/*--------- card right map ----------*/}
-        <article className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-1 flex flex-col items-center border-2 border-white/20 md:order-2 overflow-hidden">
-          <Image
-          src={"/map.png"}
-          alt="Map image not found"
-          fill
-          />
+        <article className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-1 flex flex-col items-center border-2 border-white/20 md:order-2 overflow-hidden min-h-80">
+          <Image src={"/map.png"} alt="Map image not found" fill />
+          <div className="absolute bg-emerald-300 rounded-full top-32 left-32 bg-gradient-to-r from-emerald-300 to-sky-300 h-20 w-20 border-2">
+            <Image src={"/kiko-memoji.png"} alt="kiko-memeoji image not found" fill />
+          </div>
         </article>
       </div>
     </section>
