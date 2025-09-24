@@ -10,7 +10,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function AboutSection() {
   return (
-    <section className="py-12 mx-2">
+    <section className="mt-50 mx-2">
       {/*--------- header ----------*/}
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="uppercase text-2xl font-semibold bg-gradient-to-r from-emerald-300 to-sky-600 bg-clip-text text-transparent">
@@ -113,7 +113,7 @@ export default function AboutSection() {
 
         {/*--------- card right map ----------*/}
         <article className="md:col-span-1 flex flex-col sm:items-end items-center md:order-2 sm:pr-10 pb-8 sm:justify-center sm:pb-0">
-          <Button icon={<MdArrowOutward />} className="w-fit" />
+          <Button icon={<MdArrowOutward />} className="w-fit z-20" />
         </article>
       </div>
     </section>
