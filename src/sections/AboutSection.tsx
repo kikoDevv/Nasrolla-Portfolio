@@ -38,15 +38,17 @@ export default function AboutSection() {
         {/*--------- card right ----------*/}
         <aside className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-2 flex flex-col">
           <div className="absolute inset-0 -z-10 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }} />
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 select-none">
             <GiJusticeStar className="text-emerald-300 text-xl" />
             <h3 className="text-lg font-semibold">My Toolbox</h3>
           </div>
-          <p className="text-gray-300 mt-3">Tools and technologies I use to build production-ready applications:</p>
+          <p className="text-gray-300 mt-3 select-none">
+            Tools and technologies I use to build production-ready applications:
+          </p>
           {/*--------- Tech sliders ----------*/}
           <div className="grid gap-2">
-            <TechSlider />
-            <TechSlider />
+            <TechSlider direction="forward" />
+            <TechSlider direction="backward" />
           </div>
         </aside>
       </div>

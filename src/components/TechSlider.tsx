@@ -20,10 +20,32 @@ import {
   SiPrisma,
   SiAngular,
 } from "react-icons/si";
+interface sliderProps {
+  direction?: "forward" | "backward";
+  speed?: number;
+  dragable?: boolean;
+}
 
-export function TechSlider() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [AutoScroll({ stopOnInteraction: false })]);
+export function TechSlider({ direction, speed, dragable }: sliderProps) {
+  const dir = direction ?? "backward";
+  const sp = typeof speed === "number" && !isNaN(speed) ? speed : 1;
+  const draggable = dragable ?? true;
 
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      containScroll: "trimSnaps",
+      dragFree: draggable,
+    },
+    [
+      AutoScroll({
+        speed: sp,
+        direction: dir,
+        stopOnInteraction: false,
+      }),
+    ]
+  );
   const technologies = [
     { icon: <FaReact className="w-5 h-5 text-blue-400" />, name: "React" },
     { icon: <SiNextdotjs className="w-5 h-5 text-white" />, name: "Next.js" },
@@ -46,15 +68,15 @@ export function TechSlider() {
   ];
 
   return (
-    <div className="embla mx-auto w-full mt-4">
+    <div className="embla mx-auto w-full mt-4 cursor-none">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container flex">
+        <div className="embla__container flex cursor-pointer">
           {/*--------- loop ----------*/}
           {technologies.map((tech, index) => (
             <div key={index} className="embla__slide px-2 flex max-w-fit">
               <div className="flex items-center w-fit justify-center px-3 py-2 bg-gray-900/30 rounded-lg border-2 border-white/10 gap-2 w-fit">
                 {tech.icon}
-                <p className="text-sm font-medium text-white/90">{tech.name}</p>
+                <p className="text-sm font-medium text-white/90 select-none">{tech.name}</p>
               </div>
             </div>
           ))}
