@@ -6,6 +6,7 @@ import { TechSlider } from "@/components/TechSlider";
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
 import Button from "@/components/Button";
+import { MdArrowOutward } from "react-icons/md";
 
 export default function AboutSection() {
   return (
@@ -101,7 +102,9 @@ export default function AboutSection() {
       <div className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 sm:gap-6 mt-10 items-stretch bg-gradient-to-r from-emerald-600 to-sky-400 rounded-2xl overflow-hidden mt-50">
         {/*--------- card left beyond ----------*/}
         <aside className="p-6 md:col-span-2 flex flex-col md:order-1 items-start">
-          <h3 className="text-2xl font-bold text-black/90 text-center sm:text-start">Ready to Bring Your Ideas to Life?</h3>
+          <h3 className="text-2xl font-bold text-black/90 text-center sm:text-start">
+            Ready to Bring Your Ideas to Life?
+          </h3>
           <p className="font-medium text-gray-900/80 text-center sm:text-start">
             I’d love to hear what you’re dreaming up. Reach out together we’ll craft something you’re truly proud of.
           </p>
@@ -109,7 +112,7 @@ export default function AboutSection() {
 
         {/*--------- card right map ----------*/}
         <article className="md:col-span-1 flex flex-col sm:items-end items-center md:order-2 sm:pr-10 pb-8 sm:justify-center sm:pb-0">
-          <Button icon="🚀" className="w-fit" />
+          <Button icon={<MdArrowOutward />} className="w-fit" />
         </article>
       </div>
     </section>
