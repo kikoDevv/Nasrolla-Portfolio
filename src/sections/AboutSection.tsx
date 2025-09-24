@@ -1,9 +1,10 @@
 "use client";
-import { GiJusticeStar } from "react-icons/gi";
 import React from "react";
 import grainImage from "@/images/grain.jpg";
 import { EmblaCarousel } from "@/components/Carousel";
 import { TechSlider } from "@/components/TechSlider";
+import { FaStar } from "react-icons/fa";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -13,8 +14,8 @@ export default function AboutSection() {
         <h2 className="uppercase text-2xl font-semibold bg-gradient-to-r from-emerald-300 to-sky-600 bg-clip-text text-transparent">
           About Me
         </h2>
-        <h1 className="font-serif sm:text-4xl text-2xl mt-2">A glimpse into my work</h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-300 mt-4">
+        <h1 className="font-bold sm:text-4xl text-2xl">A glimpse into my work</h1>
+        <p className="max-w-2xl mx-auto text-lg text-white/70 mt-2">
           I&apos;m a frontend developer focused on building fast, accessible, and beautiful web applications. I love
           translating ideas into polished user experiences.
         </p>
@@ -22,11 +23,11 @@ export default function AboutSection() {
 
       <div className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 items-stretch">
         {/*--------- card left ----------*/}
-        <article className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-1 flex flex-col items-center">
-          <div className="absolute inset-0 -z-10 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }} />
-          <div className="flex items-center gap-3">
-            <GiJusticeStar className="text-emerald-300 text-xl" />
-            <h3 className="text-lg font-semibold">My Game</h3>
+        <article className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-1 flex flex-col items-center border-2 border-white/20">
+          <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }} />
+          <div className="flex items-center gap-1">
+            <FaStar className="text-emerald-300 text-xl" />
+            <h3 className="text-lg font-semibold">When I'm not coding</h3>
           </div>
           <p className="text-gray-300 text-center">I enjoy exploring games that push systems and strategy.</p>
           {/*--------- image slider ----------*/}
@@ -36,10 +37,10 @@ export default function AboutSection() {
         </article>
 
         {/*--------- card right ----------*/}
-        <aside className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-2 flex flex-col">
-          <div className="absolute inset-0 -z-10 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }} />
-          <div className="flex items-center gap-3 select-none">
-            <GiJusticeStar className="text-emerald-300 text-xl" />
+        <aside className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-2 flex flex-col border-2 border-white/20">
+          <div className="absolute inset-0 -z-0 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }} />
+          <div className="flex items-center gap-1 select-none">
+            <FaStar className="text-emerald-300 text-xl" />
             <h3 className="text-lg font-semibold">My Toolbox</h3>
           </div>
           <p className="text-gray-300 mt-3 select-none">
@@ -51,6 +52,49 @@ export default function AboutSection() {
             <TechSlider direction="backward" />
           </div>
         </aside>
+      </div>
+
+      {/*------------------------ beyond the code section ------------------------*/}
+      <div className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 items-stretch">
+        {/*--------- card left beyond ----------*/}
+        <aside className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-2 flex flex-col border-2 border-white/20 md:order-1">
+          <div className="absolute inset-0 -z-0 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }} />
+          <div className="flex items-center gap-1 select-none">
+            <FaStar className="text-emerald-300 text-xl" />
+            <h3 className="text-lg font-semibold">Beyond the Code</h3>
+          </div>
+          <p className="text-gray-300 mt-3 select-none">
+            When I'm not coding, I explore other creative outlets and interests:
+          </p>
+          {/*--------- Content for beyond the code ----------*/}
+          <div className="mt-4 space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-emerald-300 rounded-full"></div>
+              <p className="text-white/90">Photography and visual storytelling</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-emerald-300 rounded-full"></div>
+              <p className="text-white/90">Learning new frameworks and technologies</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-emerald-300 rounded-full"></div>
+              <p className="text-white/90">Contributing to open source projects</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-emerald-300 rounded-full"></div>
+              <p className="text-white/90">Mentoring aspiring developers</p>
+            </div>
+          </div>
+        </aside>
+
+        {/*--------- card right map ----------*/}
+        <article className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-1 flex flex-col items-center border-2 border-white/20 md:order-2 overflow-hidden">
+          <Image
+          src={"/map.png"}
+          alt="Map image not found"
+          fill
+          />
+        </article>
       </div>
     </section>
   );
