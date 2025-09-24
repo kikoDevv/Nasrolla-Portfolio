@@ -92,6 +92,7 @@ export default function AboutSection() {
         {/*--------- card right map ----------*/}
         <article className="relative bg-gray-800 rounded-2xl p-6 shadow-lg md:col-span-1 flex flex-col items-center border-2 border-white/20 md:order-2 overflow-hidden min-h-80">
           <Image src={"/map.png"} alt="Map image not found" fill />
+          <div className="absolute top-32 left-32 bg-emerald-300 rounded-full bg-gradient-to-r from-emerald-300 to-sky-300 h-20 w-20 animate-ping"></div>
           <div className="absolute bg-emerald-300 rounded-full top-32 left-32 bg-gradient-to-r from-emerald-300 to-sky-300 h-20 w-20 border-2">
             <Image src={"/kiko-memoji.png"} alt="kiko-memeoji image not found" fill />
           </div>
