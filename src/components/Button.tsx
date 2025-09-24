@@ -25,7 +25,7 @@ export default function Button({
     "relative overflow-hidden rounded-lg px-3 py-2 text-sm font-semibold transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group transform hover:scale-102";
 
   const variants = {
-    primary: "bg-white text-gray-900 hover:bg-gray-100 shadow-md hover:shadow-xl",
+    primary: "bg-white text-gray-900 hover:bg-gray-100 shadow-md",
     secondary: "bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/40",
   };
   const content = children || (
