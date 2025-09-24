@@ -37,7 +37,7 @@ export default function Hero() {
       <div className="grid">
         <div className="grid justify-center justify-items-center">
           <Image src={"/kikoMain.png"} alt="Kikos image not found!" width={100} height={100} />
-          <div className="flex items-center gap-2 px-3 border rounded-sm border-gray-500/50 bg-black/90 backdrop-blur">
+          <div className="flex items-center gap-2 px-3 border rounded-md border-white/11 bg-black/60 backdrop-blur">
             {/*--------- Pulsing ring ----------*/}
             <div className="relative flex items-center justify-center">
               <div className="absolute border-2 border-green-500 rounded-full size-3 animate-ping" />
