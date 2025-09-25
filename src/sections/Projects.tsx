@@ -9,25 +9,29 @@ import Image from "next/image";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
+    company: "Project",
     year: "2025",
     title: "Movie Scout",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "A premium movie streaming platform" },
+      { title: "Unlimited access to films & TV shows" },
+      { title: "nstantly search & preview trailers" },
+      { title: "Secure sign-in via Clerk authentication" },
+      { title: "Stream or browse detailed movie info" },
     ],
     link: "https://movie-scout-rho.vercel.app/",
     image: movieScout,
   },
   {
-    company: "Innovative Co",
-    year: "2024",
+    company: "Project",
+    year: "2025",
     title: "Taxi legitimation",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "An e-learning platform for taxi license theory" },
+      { title: "Trafikverket-style practice questions, updated 2025" },
+      { title: "Modern quiz app, seamless on mobile & desktop" },
+      { title: "Instant explanations for each question" },
+      { title: "Secure login for premium quiz content" },
     ],
     link: "https://taxilegitimationapp.se/",
     image: taxi,
@@ -37,9 +41,11 @@ const portfolioProjects = [
     year: "2025",
     title: "Wordle-GPT",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Classic Wordle game with sleek modern design" },
+      { title: "Multipage page website for user information" },
+      { title: "Live score system powered by MongoDB" },
+      { title: "Secure leaderboard with player game data" },
+      { title: "Minimalist, color-coded UI for clarity and ease" },
     ],
     link: "https://wordle-gpt.vercel.app/",
     image: wordle,
@@ -85,9 +91,7 @@ export const ProjectsSection = () => {
 
                   <div className="grid space-y-3 mb-5">
                     <h3 className="font-bold text-2xl lg:text-4xl leading-tight">{project.title}</h3>
-
                     <hr className="border-t-2 border-white/5" />
-
                     <ul className="flex flex-col gap-4">
                       {project.results.map((result, idx) => (
                         <li key={idx} className="flex items-center gap-3  text-base lg:text-lg text-white/70">
@@ -95,9 +99,10 @@ export const ProjectsSection = () => {
                           <span>{result.title}</span>
                         </li>
                       ))}
-                    </ul>
-
-                    <Button text="Visit Live Site" icon="📎" className="w-fit h-fit" />
+                    </ul>{" "}
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-fit">
+                      <Button text="Visit Live Site" icon="📎" className="w-fit h-fit" />
+                    </a>
                   </div>
                 </div>
 

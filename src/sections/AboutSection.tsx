@@ -84,7 +84,7 @@ export default function AboutSection() {
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-emerald-300 rounded-full"></div>
-              <p className="text-white/90">Mentoring aspiring developers</p>
+              <p className="text-white/90">Playing footbal with friens and teamate</p>
             </div>
           </div>
         </aside>
