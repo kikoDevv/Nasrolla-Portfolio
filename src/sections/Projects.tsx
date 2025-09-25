@@ -48,7 +48,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section>
+    <section id="projects">
       <div className="grid sm:mt-40 mt-5">
         {/*--------- text info ----------*/}
         <div className="grid items-center justify-items-center mb-20">

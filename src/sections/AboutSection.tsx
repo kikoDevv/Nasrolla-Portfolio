@@ -10,7 +10,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function AboutSection() {
   return (
-    <section className="mt-50 mx-2">
+    <section id="about" className="mt-50 mx-2">
       {/*--------- header ----------*/}
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="uppercase text-2xl font-semibold bg-gradient-to-r from-emerald-300 to-sky-600 bg-clip-text text-transparent">
@@ -100,7 +100,9 @@ export default function AboutSection() {
       </div>
 
       {/*------------------------ lets connect section ------------------------*/}
-      <div className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 sm:gap-6 mt-10 items-stretch bg-gradient-to-r from-emerald-600 to-sky-400 rounded-2xl overflow-hidden mt-50">
+      <div
+        id="connect"
+        className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 sm:gap-6 mt-10 items-stretch bg-gradient-to-r from-emerald-600 to-sky-400 rounded-2xl overflow-hidden mt-50">
         {/*--------- card left beyond ----------*/}
         <aside className="p-6 md:col-span-2 flex flex-col md:order-1 items-start">
           <h3 className="text-2xl font-bold text-black/90 text-center sm:text-start">

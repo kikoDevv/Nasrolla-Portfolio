@@ -7,7 +7,7 @@ import Stars from "@/components/Stars";
 
 export default function Hero() {
   return (
-    <section className="relative z-0 py-70">
+    <section id="home" className="relative z-0 py-70">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,_transparent,_black_10%,_black_70%,_transparent)] overflow-hidden">
         <div
           className="absolute inset-0 -z-30 opacity-5 h-dvh"
@@ -57,8 +57,18 @@ export default function Hero() {
             results. Ready to bring your vision to life?
           </p>
           <div className="grid justify-center gap-5 mt-5 sm:flex sm:mt-2">
-            <Button icon="👋" iconPosition="left" text="Let's Connect" />
-            <Button variant="secondary" text="Explore My Work" icon="↓" />
+            <a href="https://github.com/kikoDevv" target="_blank" rel="noopener noreferrer">
+              <Button icon="👋" iconPosition="left" text="Let's Connect" />
+            </a>
+            <Button
+              variant="secondary"
+              text="Explore My Work"
+              icon="↓"
+              onClick={() => {
+                const el = document.getElementById("projects");
+                if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            />
           </div>
         </section>
       </div>

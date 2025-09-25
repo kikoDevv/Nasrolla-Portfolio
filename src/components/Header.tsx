@@ -20,7 +20,28 @@ export default function Header() {
           <motion.a
             key={item.name}
             href={item.href}
-            onClick={() => setActiveItem(item.name)}
+            onClick={(e) => {
+              e.preventDefault();
+              setActiveItem(item.name);
+              if (item.name === "Projects") {
+                const el = document.getElementById("projects");
+                if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+              if (item.name === "Home") {
+                const h = document.getElementById("home");
+                if (h) h.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+              if (item.name === "About") {
+                const a = document.getElementById("about");
+                if (a) a.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+              if (item.name === "Contact") {
+                const c = document.getElementById("connect");
+                if (c) c.scrollIntoView({ behavior: "smooth", block: "start" });
+              } else if (item.href && item.href !== "#") {
+                window.location.href = item.href;
+              }
+            }}
             className={`relative px-4 py-1.5 text-sm font-semibold transition-colors duration-200 rounded-full ${
               activeItem === item.name ? "text-gray-900" : "text-white/70 hover:text-white/90"
             }`}
