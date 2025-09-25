@@ -1,4 +1,5 @@
 import movieScout from "@/images/movieScout.png";
+import budget from "@/images/easyBudget.png";
 import taxi from "@/images/taxi.png";
 import wordle from "@/images/wordle.png";
 import grainImage from "@/images/grain.jpg";
@@ -21,6 +22,20 @@ const portfolioProjects = [
     ],
     link: "https://movie-scout-rho.vercel.app/",
     image: movieScout,
+  },
+  {
+    company: "Project",
+    year: "2022",
+    title: "Easy Budget",
+    results: [
+      { title: "A Ios budget tracker App" },
+      { title: "Track income & expenses with ease" },
+      { title: "Smart budgets and instant categorization" },
+      { title: "Clear spending charts at a glance" },
+      { title: "All your data stays securely on your device" },
+    ],
+    link: "https://apps.apple.com/se/app/easybudget/id6446150580?l=en-GB",
+    image: budget,
   },
   {
     company: "Project",
@@ -79,7 +94,7 @@ export const ProjectsSection = () => {
               <div
                 className="absolute inset-0 -z-10 opacity-5"
                 style={{ backgroundImage: `url(${grainImage.src})` }}></div>
-              <div className="sm:flex justify-center grid">
+              <div className="sm:flex grid justify-between">
                 <div className="sm:grid">
                   <div className="flex">
                     <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
@@ -99,15 +114,15 @@ export const ProjectsSection = () => {
                           <span>{result.title}</span>
                         </li>
                       ))}
-                    </ul>{" "}
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-fit">
+                    </ul>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex justify-center">
                       <Button text="Visit Live Site" icon="📎" className="w-fit h-fit" />
                     </a>
                   </div>
                 </div>
 
                 {/*--------- Image Section ----------*/}
-                <div className="relative sm:ml-3">
+                <div className="relative sm:ml-3 flex">
                   <Image
                     src={project.image}
                     alt={`${project.title} screenshot`}

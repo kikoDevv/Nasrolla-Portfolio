@@ -115,7 +115,9 @@ export default function AboutSection() {
 
         {/*--------- card right map ----------*/}
         <article className="md:col-span-1 flex flex-col sm:items-end items-center md:order-2 sm:pr-10 pb-8 sm:justify-center sm:pb-0">
-          <Button icon={<MdArrowOutward />} className="w-fit z-20" />
+          <a href="https://github.com/kikoDevv" target="_blank" rel="noopener noreferrer" className="w-fit">
+            <Button icon={<MdArrowOutward />} className="w-fit z-20" />
+          </a>
         </article>
       </div>
     </section>
