@@ -16,7 +16,7 @@ const portfolioProjects = [
     results: [
       { title: "A premium movie streaming platform" },
       { title: "Unlimited access to films & TV shows" },
-      { title: "nstantly search & preview trailers" },
+      { title: "Search, filter & preview trailers" },
       { title: "Secure sign-in via Clerk authentication" },
       { title: "Stream or browse detailed movie info" },
     ],
@@ -28,7 +28,7 @@ const portfolioProjects = [
     year: "2022",
     title: "Easy Budget",
     results: [
-      { title: "A Ios budget tracker App" },
+      { title: "A Ios budget tracker App Available on Ios App store" },
       { title: "Track income & expenses with ease" },
       { title: "Smart budgets and instant categorization" },
       { title: "Clear spending charts at a glance" },
@@ -86,9 +86,9 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, index) => (
             <div
               key={project.title}
-              className={`bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 pl-8 pr-8 sm:pr-5 pt-8 mx-2 sm:pb-0 after:pointer-events-none sticky mb-20`}
+              className={`bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 pl-8 pr-8 sm:pr-5 pt-8 mx-2 sm:pb-0 after:pointer-events-none sticky sm:mb-20 mb-40`}
               style={{
-                top: `${5 + index * 2}rem`,
+                top: `${4 + index * 1}rem`,
                 height: "fit-content",
               }}>
               <div
