@@ -42,8 +42,8 @@ const portfolioProjects = [
     year: "2025",
     title: "Taxi legitimation",
     results: [
-      { title: "An e-learning platform for taxi license theory" },
-      { title: "Trafikverket-style practice questions, updated 2025" },
+      { title: "E-learning platform for taxi license" },
+      { title: "Trafikverket practice questions" },
       { title: "Modern quiz app, seamless on mobile & desktop" },
       { title: "Instant explanations for each question" },
       { title: "Secure login for premium quiz content" },
