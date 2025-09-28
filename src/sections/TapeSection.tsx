@@ -25,7 +25,7 @@ const words = [
 
 export default function TapeSection() {
   return (
-    <section className="py-16">
+    <section className="py-16 overflow-hidden">
       <div className="bg-gradient-to-r from-emerald-300 via-purple-500 to-sky-400 overflow-hidden -rotate-3 -mx-1">
         <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex flex-none gap-4 py-3 animate-move-left" style={{ animationDuration: "30s" }}>
