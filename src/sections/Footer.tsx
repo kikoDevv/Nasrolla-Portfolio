@@ -4,11 +4,11 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="text-white relative z-10 overflow-x-hidden sm:pt-30">
+    <footer className="text-white relative z-10 overflow-x-hidden sm:pt-30 pt-10">
       <hr className="text-white/10" />
       <div className="absolute left-1/2 bottom-0 -translate-x-1/2 h-[400px] w-[1600px] bg-emerald-300/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] -z-10"></div>
       <div className="max-w-6xl mx-auto px-6 py-10">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center sm:justify-between gap-6">
           <a
             href="https://github.com/kikoDevv"
             target="_blank"
@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
           </a>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center sm:gap-4 gap-20">
             <a
               href="https://github.com/kikoDevv"
               target="_blank"
@@ -50,7 +50,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <nav className="flex items-center gap-6">
+          <nav className="flex items-center sm:gap-6 gap-20">
             <a
               href="#projects"
               className="text-sm hover:underline relative z-20 pointer-events-auto focus:outline-none focus:ring-2 focus:ring-emerald-300">
