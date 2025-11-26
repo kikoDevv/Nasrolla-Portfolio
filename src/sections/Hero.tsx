@@ -50,7 +50,7 @@ export default function Hero() {
         {/*--------- Title  ----------*/}
         <section className="grid gap-2 pt-4">
           <h1 className="text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-white to-gray-300 bg-clip-text">
-            Crafting Digital Excellence
+            Hi, Im Nasrolla
           </h1>
           <p className="max-w-xl mx-auto text-lg leading-relaxed text-center text-gray-300 md:text-xl">
             I transform innovative ideas into stunning, high-performance web experiences that captivate users and drive
