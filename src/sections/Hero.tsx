@@ -63,7 +63,7 @@ export default function Hero() {
             Hi, Im Nasrolla
           </h1>
 
-          <div className="place-self-center justify-items-start sm:w-125 w-100">
+          <div className="place-self-center justify-items-start sm:max-w-125 max-w-95">
             <div className="flex pl-6 py-2 text-sm sm:text-lg text-center text-gray-300 leading-relaxed gap-2">
               <p>I build </p>
               <Dot
