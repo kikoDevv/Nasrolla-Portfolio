@@ -81,15 +81,7 @@ export const Button = ({
     await animateSuccess();
   };
 
-  const {
-    onClick: _onClick,
-    onAnimationStart: _,
-    onAnimationEnd: __,
-    onDrag: ___,
-    onDragStart: ____,
-    onDragEnd: _____,
-    ...buttonProps
-  } = props;
+  const { onClick: _onClick, onAnimationStart, onAnimationEnd, onDrag, onDragStart, onDragEnd, ...buttonProps } = props;
 
   return (
     <motion.button
