@@ -4,8 +4,7 @@ import taxi from "@/images/taxi.png";
 import wordle from "@/images/wordle.png";
 import grainImage from "@/images/grain.jpg";
 import { FaCheckCircle } from "react-icons/fa";
-
-import Button from "@/components/Button";
+import { Button as StatefulButton } from "@/components/ui/stateful-button";
 import Image from "next/image";
 
 const portfolioProjects = [
@@ -115,9 +114,18 @@ export const ProjectsSection = () => {
                         </li>
                       ))}
                     </ul>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex justify-center">
-                      <Button text="Visit Live Site" icon="📎" className="w-fit h-fit" />
-                    </a>
+                    <div className="flex justify-center">
+                      <StatefulButton
+                        bgColor="#ffffff"
+                        textColorClass="text-black"
+                        ringColor="#10b981"
+                        loaderColor="text-green-500"
+                        onClick={async () => {
+                          window.open(project.link, "_blank");
+                        }}>
+                        📎 Visit Live Site
+                      </StatefulButton>
+                    </div>
                   </div>
                 </div>
 

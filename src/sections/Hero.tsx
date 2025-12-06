@@ -1,8 +1,7 @@
 "use client";
-
+import { Button as StatefulButton } from "@/components/ui/stateful-button";
 import Image from "next/image";
 import React from "react";
-import Button from "@/components/Button";
 import Stars from "@/components/Stars";
 import Dot from "@/components/dot";
 
@@ -62,8 +61,7 @@ export default function Hero() {
           <h1 className="text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-white to-gray-300 bg-clip-text">
             Hi, Im Nasrolla
           </h1>
-
-          <div className="place-self-center justify-items-start sm:max-w-125 max-w-95">
+          <div className="place-self-center sm:w-125 w-95">
             <div className="flex pl-6 py-2 text-sm sm:text-lg text-center text-gray-300 leading-relaxed gap-2">
               <p>I build </p>
               <Dot
@@ -80,19 +78,29 @@ export default function Hero() {
             </div>
           </div>
           <p className="max-w-xl mx-auto text-lg leading-relaxed text-center text-gray-300 md:text-xl"></p>
-          <div className="grid justify-center gap-5 mt-5 sm:flex sm:mt-2">
-            <a href="https://github.com/kikoDevv" target="_blank" rel="noopener noreferrer">
-              <Button icon="👋" iconPosition="left" text="Let's Connect" />
-            </a>
-            <Button
-              variant="secondary"
-              text="Explore My Work"
-              icon="↓"
-              onClick={() => {
+          <div className="grid justify-center gap-5 mt-5 sm:flex sm:mt-2 relative z-10">
+            <StatefulButton
+              bgColor="#10b981"
+              textColorClass="text-white"
+              ringColor="#4b5563"
+              loaderColor="text-white"
+              onClick={async () => {
+                window.open("https://github.com/kikoDevv", "_blank");
+              }}>
+              👋 Let's Connect
+            </StatefulButton>
+
+            <StatefulButton
+              bgColor="#1f2937"
+              textColorClass="text-white"
+              ringColor="#4b5563"
+              loaderColor="text-white"
+              onClick={async () => {
                 const el = document.getElementById("projects");
                 if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-              }}
-            />
+              }}>
+              ↓ Explore My Work
+            </StatefulButton>
           </div>
         </section>
       </div>
