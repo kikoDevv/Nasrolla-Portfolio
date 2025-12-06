@@ -62,7 +62,7 @@ export default function Hero() {
             Hi, Im Nasrolla
           </h1>
           <div className="place-self-center sm:w-125 w-95">
-            <div className="flex pl-6 py-2 text-sm sm:text-lg text-center text-gray-300 leading-relaxed gap-2">
+            <div className="flex sm:pl-6 pl-2 py-2 text-sm sm:text-lg text-center text-gray-300 leading-relaxed gap-2">
               <p>I build </p>
               <Dot
                 cycle={true}

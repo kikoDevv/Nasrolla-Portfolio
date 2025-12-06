@@ -1,6 +1,8 @@
 import movieScout from "@/images/movieScout.png";
 import budget from "@/images/easyBudget.png";
 import taxi from "@/images/taxi.png";
+import github from "@/images/github.png";
+import bowling from "@/images/bowling.png";
 import wordle from "@/images/wordle.png";
 import grainImage from "@/images/grain.jpg";
 import { FaCheckCircle } from "react-icons/fa";
@@ -27,7 +29,7 @@ const portfolioProjects = [
     year: "2022",
     title: "Easy Budget",
     results: [
-      { title: "A Ios budget tracker App Available on Ios App store" },
+      { title: "An iOS budget tracker app available on the App Store" },
       { title: "Track income & expenses with ease" },
       { title: "Smart budgets and instant categorization" },
       { title: "Clear spending charts at a glance" },
@@ -39,7 +41,21 @@ const portfolioProjects = [
   {
     company: "Project",
     year: "2025",
-    title: "Taxi legitimation",
+    title: "GitHub Manager",
+    results: [
+      { title: "Manage your followers instantly" },
+      { title: "Clean up your GitHub network effortlessly" },
+      { title: "Follow and unfollow users" },
+      { title: "See who follows you back and who doesn't" },
+      { title: "Get a clear overview of your mutual connections" },
+    ],
+    link: "https://github-follower-manager.vercel.app/",
+    image: github,
+  },
+  {
+    company: "Project",
+    year: "2025",
+    title: "Taxi Legitimation",
     results: [
       { title: "E-learning platform for taxi license" },
       { title: "Trafikverket practice questions" },
@@ -56,13 +72,27 @@ const portfolioProjects = [
     title: "Wordle-GPT",
     results: [
       { title: "Classic Wordle game with sleek modern design" },
-      { title: "Multipage page website for user information" },
+      { title: "Multipage website for user information" },
       { title: "Live score system powered by MongoDB" },
       { title: "Secure leaderboard with player game data" },
       { title: "Minimalist, color-coded UI for clarity and ease" },
     ],
     link: "https://wordle-gpt.vercel.app/",
     image: wordle,
+  },
+  {
+    company: "Project",
+    year: "2025",
+    title: "Bowling Simulator",
+    results: [
+      { title: "Manage your bowling scores easily" },
+      { title: "The web app calculates your points automatically" },
+      { title: "It shows you the state of your game" },
+      { title: "It can be challenging if you don't know bowling" },
+      { title: "But this web app helps you track your points" },
+    ],
+    link: "https://bowling-simulator.vercel.app/",
+    image: bowling,
   },
 ];
 
@@ -114,7 +144,7 @@ export const ProjectsSection = () => {
                         </li>
                       ))}
                     </ul>
-                    <div className="flex justify-center">
+                    <div className="hidden sm:flex justify-center">
                       <StatefulButton
                         bgColor="#ffffff"
                         textColorClass="text-black"
@@ -130,7 +160,7 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/*--------- Image Section ----------*/}
-                <div className="relative sm:ml-3 flex">
+                <div className="relative sm:ml-3 flex flex-col">
                   <Image
                     src={project.image}
                     alt={`${project.title} screenshot`}
@@ -138,6 +168,18 @@ export const ProjectsSection = () => {
                     height={400}
                     className="w-full h-auto rounded-t-2xl shadow-2xl border border-white/10"
                   />
+                  <div className="sm:hidden flex justify-center mt-4 mb-4">
+                    <StatefulButton
+                      bgColor="#ffffff"
+                      textColorClass="text-black"
+                      ringColor="#10b981"
+                      loaderColor="text-green-500"
+                      onClick={async () => {
+                        window.open(project.link, "_blank");
+                      }}>
+                      📎 Visit Live Site
+                    </StatefulButton>
+                  </div>
                 </div>
               </div>
             </div>
