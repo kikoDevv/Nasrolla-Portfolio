@@ -16,9 +16,9 @@ export default function AboutSection() {
         <h2 className="uppercase text-2xl font-semibold bg-gradient-to-r from-emerald-300 to-sky-600 bg-clip-text text-transparent">
           About Me
         </h2>
-        <h1 className="font-bold sm:text-4xl text-2xl">A glimpse into my work</h1>
+        <h1 className="font-bold sm:text-4xl text-2xl">A glimpse into my life</h1>
         <p className="max-w-2xl mx-auto text-lg text-white/70 mt-2">
-          I&apos;m a frontend developer focused on building fast, accessible, and beautiful web applications. I love
+          I&apos;m a fullstack developer focused on building fast, accessible, and beautiful web applications. I love
           translating ideas into polished user experiences.
         </p>
       </div>

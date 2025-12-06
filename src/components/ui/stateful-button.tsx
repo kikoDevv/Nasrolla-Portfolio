@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React from "react";
-import { motion, AnimatePresence, useAnimate } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -77,21 +77,17 @@ export const Button = ({
 
   const handleClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
     await animateLoading();
-    await props.onClick?.(event);
+    await _onClick?.(event);
     await animateSuccess();
   };
 
   const {
-    onClick,
-    onDrag,
-    onDragStart,
-    onDragEnd,
-    onAnimationStart,
-    onAnimationEnd,
-    bgColor: _,
-    textColorClass: __,
-    ringColor: ___,
-    loaderColor: ____,
+    onClick: _onClick,
+    onAnimationStart: _,
+    onAnimationEnd: __,
+    onDrag: ___,
+    onDragStart: ____,
+    onDragEnd: _____,
     ...buttonProps
   } = props;
 

@@ -87,7 +87,7 @@ export default function Hero() {
               onClick={async () => {
                 window.open("https://github.com/kikoDevv", "_blank");
               }}>
-              👋 Let's Connect
+              👋 Let&apos;s Connect
             </StatefulButton>
 
             <StatefulButton
