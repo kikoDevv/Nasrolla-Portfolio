@@ -57,8 +57,8 @@ const portfolioProjects = [
     year: "2025",
     title: "Taxi Legitimation",
     results: [
-      { title: "E-learning platform for taxi license" },
-      { title: "Trafikverket practice questions" },
+      { title: "E-learning platform for traning to pass taxi license test" },
+      { title: "Covers all the practice questions from trafikverket" },
       { title: "Modern quiz app, seamless on mobile & desktop" },
       { title: "Instant explanations for each question" },
       { title: "Secure login for premium quiz content" },
@@ -115,7 +115,7 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, index) => (
             <div
               key={project.title}
-              className={`bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 pl-8 pr-8 sm:pr-5 pt-8 mx-2 sm:pb-0 after:pointer-events-none sticky sm:mb-20 mb-40`}
+              className={`bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 sm:px-8 sm:pt-10 mx-2 sm:pb-0 after:pointer-events-none sticky sm:mb-20 mb-40`}
               style={{
                 top: `${4 + index * 1}rem`,
                 height: "fit-content",
@@ -124,7 +124,7 @@ export const ProjectsSection = () => {
                 className="absolute inset-0 -z-10 opacity-5"
                 style={{ backgroundImage: `url(${grainImage.src})` }}></div>
               <div className="sm:flex grid justify-between">
-                <div className="sm:grid">
+                <div className="sm:grid p-5 sm:p-0">
                   <div className="flex">
                     <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                       <span>{project.company}</span>
@@ -133,7 +133,7 @@ export const ProjectsSection = () => {
                     </div>
                   </div>
 
-                  <div className="grid space-y-3 mb-5">
+                  <div className="grid space-y-3 sm:mb-5">
                     <h3 className="font-bold text-2xl lg:text-4xl leading-tight">{project.title}</h3>
                     <hr className="border-t-2 border-white/5" />
                     <ul className="flex flex-col gap-4">
@@ -160,26 +160,26 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/*--------- Image Section ----------*/}
-                <div className="relative sm:ml-3 flex flex-col">
+                <div className="relative sm:ml-3 flex flex-col order-first sm:order-last">
                   <Image
                     src={project.image}
                     alt={`${project.title} screenshot`}
                     width={600}
                     height={400}
-                    className="w-full h-auto rounded-t-2xl shadow-2xl border border-white/10"
+                    className="w-full h-auto rounded-t-2xl"
                   />
-                  <div className="sm:hidden flex justify-center mt-4 mb-4">
-                    <StatefulButton
-                      bgColor="#ffffff"
-                      textColorClass="text-black"
-                      ringColor="#10b981"
-                      loaderColor="text-green-500"
-                      onClick={async () => {
-                        window.open(project.link, "_blank");
-                      }}>
-                      📎 Visit Live Site
-                    </StatefulButton>
-                  </div>
+                </div>
+                <div className="sm:hidden flex justify-center sm:mt-4 sm:mb-4 mb-3">
+                  <StatefulButton
+                    bgColor="#ffffff"
+                    textColorClass="text-black"
+                    ringColor="#10b981"
+                    loaderColor="text-green-500"
+                    onClick={async () => {
+                      window.open(project.link, "_blank");
+                    }}>
+                    📎 Visit Live Site
+                  </StatefulButton>
                 </div>
               </div>
             </div>
