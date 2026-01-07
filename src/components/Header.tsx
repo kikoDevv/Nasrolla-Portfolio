@@ -14,7 +14,7 @@ export default function Header() {
   const [activeItem, setActiveItem] = useState("Home");
 
   return (
-    <section className="fixed top-3 left-1/2 transform -translate-x-1/2 z-50">
+    <section className="fixed sm:top-3 top-1 left-1/2 transform -translate-x-1/2 z-50">
       <nav className="flex justify-center items-center bg-white/10 backdrop-blur border border-white/15 gap-1 p-0.5 rounded-full">
         {navItems.map((item) => (
           <motion.a
