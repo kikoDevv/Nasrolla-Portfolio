@@ -85,7 +85,7 @@ export default function Hero() {
               ringColor="#4b5563"
               loaderColor="text-white"
               onClick={async () => {
-                window.open("https://github.com/kikoDevv", "_blank");
+                window.open("https://github.com/kikoDevv");
               }}>
               👋 Let&apos;s Connect
             </StatefulButton>
